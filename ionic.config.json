@@ -1,5 +1,7 @@
 {
   "name": "flames",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
