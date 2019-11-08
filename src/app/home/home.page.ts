@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  boyName: string = 'John'
-  girlName: string = 'Jessica'
+  boyName: string = ''
+  girlName: string = ''
   flamesResult
   flamesMeaning = {
     F: 'Friends',
@@ -19,6 +19,9 @@ export class HomePage {
     E: 'Enemy',
     S: 'Sibilings'
   }
+  girlNameError = false
+  boyNameError = false
+  errorMsg = ''
 
   constructor(
     public parse: DataService,
@@ -56,10 +59,20 @@ export class HomePage {
 
   check() {
     console.log('checking')
-    if (this.boyName.toLocaleLowerCase() == this.girlName.toLocaleLowerCase()) {
-      console.log('are you sure?')
+    if (this.boyName == '' || this.girlName == '') {
+      this.boyNameError = this.boyName == ''
+      this.girlNameError = this.girlName == ''
+      this.errorMsg = "Check the names again"
       return;
     }
+
+    if (this.boyName.toLocaleLowerCase() == this.girlName.toLocaleLowerCase()) {
+      console.log('are you sure?')
+      this.boyNameError = this.girlNameError = true
+      this.errorMsg = "Check the names again"
+      return;
+    }
+    this.boyNameError = this.girlNameError = false
     this.boyName.replace(' ', '')
     this.girlName.replace(' ', '')
     this.doFlames()

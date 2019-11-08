@@ -4,7 +4,7 @@
     .letter {
         font-family: 'Poppins Bold';
         font-size: 60px;
-        
+
         &.result {
             color: #FF006F;
         }
@@ -38,4 +38,10 @@
     .row2 {
         grid-row: 2;
     }
+}
+
+.button {
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
 }

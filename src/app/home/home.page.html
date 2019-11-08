@@ -1,19 +1,12 @@
 <ion-content>
-  <h2 id="heading" align="center">Flames</h2>
-  <!-- <ion-item>
-    <ion-label position="floating">Boy's Name</ion-label>
-    <ion-input type="text" [(ngModel)]="boyName" class="name-input" id="boyName"></ion-input>
-  </ion-item>
+  <main id="main">
+    <h2 id="heading" align="center">Flames</h2>
 
-  <ion-item>
-    <ion-label position="floating">Girl's Name</ion-label>
-    <ion-input type="text" [(ngModel)]="girlName" class="name-input" id="girlName"></ion-input>
-  </ion-item> -->
+    <input [(ngModel)]="boyName" [class.error]="this.boyNameError" class="name-input" type="text"
+      placeholder="Boy's Name" />
+    <input [(ngModel)]="girlName" [class.error]="this.girlNameError" class="name-input" type="text"
+      placeholder="Girl's Name" />
 
-  <input [(ngModel)]="boyName" class="name-input" type="text" placeholder="Boy's Name" />
-  <input [(ngModel)]="girlName" class="name-input" type="text" placeholder="Girl's Name" />
-
-  <!-- <ion-button (click)="check()" mode="ios" full> Calculate</ion-button> -->
-  <div (click)="check()" class="button" align="center">Continue</div>
-
+    <div (click)="check()" class="button" align="center">Continue</div>
+  </main>
 </ion-content>

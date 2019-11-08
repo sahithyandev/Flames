@@ -1,4 +1,6 @@
-// @import './../../global.scss';
+#main {
+    height: inherit;
+}
 
 ion-content {
     display: grid;
@@ -27,14 +29,32 @@ ion-content {
     width: 80%;
     margin-bottom: 10px;
     border-radius: 14px;
-    height: 5vh;
-    border: none;
-    font-family: 'Poppins Medium';
+    height: 32px;
+    border-width: 0px;
+    font-family: 'Poppins SemiBold';
+
+    &:focus {
+        border: none;
+    }
+}
+
+.error {
+    border-color: red;
+    border-width: 2px;
+    background-color: red;
+    color: white;
+
+    &::placeholder{
+        color: white;
+    }
 }
 
 #heading {
     font-size: 2.6em;
     font-weight: bold;
-
     margin: 100px auto;
+}
+
+.error-msg {
+    align-content: center;
 }

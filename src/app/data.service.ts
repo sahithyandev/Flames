@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   public flamesResult: string
-  public names: object = {
+  public names = {
     boyName: '',
     girlName: ''
   }
